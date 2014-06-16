@@ -1,0 +1,21 @@
+{
+    "name": "mobishift/laravel-cashive",
+    "description": "leravel wraper for cashive php sdk.",
+    "authors": [
+        {
+            "name": "deckmon",
+            "email": "yanghb@msan.cn"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "mobishift/libcashive": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Mobishift\\LaravelCashive": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
