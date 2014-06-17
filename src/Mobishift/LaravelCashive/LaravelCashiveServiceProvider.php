@@ -19,7 +19,7 @@ class LaravelCashiveServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('mobishift/laravelcashive');
+		$this->package('mobishift/laravel-cashive');
 	}
 	/**
 	 * Register the service provider.
@@ -30,10 +30,10 @@ class LaravelCashiveServiceProvider extends ServiceProvider {
 	{
 		$this->app->bind('cashive', function($app)
 		{
-		    $client = new Client($app['config']->get("laravelcashive::cashive.key"), $app['config']->get("laravelcashive::cashive.secret"));
-		    $client->debug = $app['config']->get("laravelcashive::cashive.debug");
-            if($app['config']->get("laravelcashive::cashive.debug_host")){
-                $client->host = $app['config']->get("laravelcashive::cashive.debug_host");
+		    $client = new Client($app['config']->get("laravel-cashive::cashive.key"), $app['config']->get("laravel-cashive::cashive.secret"));
+		    $client->debug = $app['config']->get("laravel-cashive::cashive.debug");
+            if($app['config']->get("laravel-cashive::cashive.debug_host")){
+                $client->host = $app['config']->get("laravel-cashive::cashive.debug_host");
             }
 			return $client;
 		});
